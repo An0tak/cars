@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>add new car</title>
+  <link href="/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<form th:action="@{/addcar}" th:method="post" th:object="${car}">
+
+    <span class="block">
+            <input type="text" name="make"   placeholder="Make" required>
+    </span>
+  <span class="block">
+            <input type="text" name="model"  placeholder="Model" required>
+    </span>
+  <span class="block">
+            <input type="text" name="power"  placeholder="Power" required>
+    </span>
+  <span class="block">
+            <input type="text" name="torque"  placeholder="Torque" required>
+    </span>
+  <span class="block">
+            <input type="number" step="0.1" name="acceleration"  placeholder="Acceleration" required>
+    </span>
+  <span class="block">
+            <legend>Driven wheels</legend>
+    </span>
+  <span class="block"> <input type="radio" name="drive"  th:value="FWD" id="fwd"/>
+                <label for="fwd">FWD</label>
+    </span>
+  <span class="block">   <input type="radio" name="drive" th:value="RWD" id="rwd"/>
+                <label for="rwd">RWD</label>
+    </span>
+  <span class="block">  <input type="radio" name="drive" th:value="AWD" id="awd"/>
+                <label for="awd">AWD</label>
+    </span>
+  <span class="block">
+            <input type="text" name="topSpeed"  placeholder="Top Speed" required>
+    </span>
+  <span class="block">
+            <input type="text" name="weight"  placeholder="Weight" required>
+    </span>
+  <span class="block">
+            <input type="text" name="price"  placeholder="Price" required>
+    </span>
+
+  <button type="submit">Add</button>
+</form>
+
+</body>
+</html>

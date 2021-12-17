@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit car</title>
+    <link href="/style.css" rel="stylesheet"/>
+</head>
+<body>
+<form th:action="@{/addcar}" th:method="post" th:object="${car}">
+    <input type="hidden" th:field="*{id}">
+    <span class="block">
+        Make:
+            <input type="text" th:field="${car.make}" th:value="${car.make}"  placeholder="Make" required>
+    </span>
+    <span class="block">
+        Model:
+            <input type="text" th:field="${car.model}" th:value="${car.model}" placeholder="Model" required>
+    </span>
+    <span class="block">
+        Power:
+            <input type="text" th:field="${car.power}" th:value="${car.power}" placeholder="Power" required>
+    </span>
+    <span class="block">
+        Torque:
+            <input type="text" th:field="${car.torque}" th:value="${car.torque}" placeholder="Torque" required>
+    </span>
+    <span class="block">
+        Acceleration:
+            <input type="number" step="0.1" th:field="${car.acceleration}" th:value="${car.acceleration}" placeholder="Acceleration" required>
+        s
+    </span>
+    <span class="block">
+        Driven Wheels:
+
+    </span>
+    <span class="block"> <input type="radio" th:field="*{drive}" th:value="FWD" id="fwd"/>
+                <label for="fwd">FWD</label>
+    </span>
+    <span class="block">   <input type="radio" th:field="*{drive}" th:value="RWD" id="rwd"/>
+                <label for="rwd">RWD</label>
+    </span>
+    <span class="block">  <input type="radio" th:field="*{drive}" th:value="AWD" id="awd"/>
+                <label for="awd">AWD</label>
+    </span>
+    <span class="block">
+        Top Speed:
+            <input type="text" th:field="${car.topSpeed}" th:value="${car.topSpeed}" placeholder="Top Speed" required>
+        Km/h
+    </span>
+    <span class="block">
+        Weight
+            <input type="text" th:field="${car.weight}" th:value="${car.weight}" placeholder="Weight" required>
+        Kg
+    </span>
+    <span class="block">
+        Price:
+            <input type="text" th:field="${car.price}" th:value="${car.price}" placeholder="Price" required>
+        HUF
+    </span>
+
+    <button type="submit">Edit</button>
+</form>
+</body>
+</html>

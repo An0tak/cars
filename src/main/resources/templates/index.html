@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link href="/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="outer">
+    <div class="inner">
+        <a th:href="@{/addcar}">
+            <button class="button-78" role="button">Add car</button>
+        </a>
+    </div>
+    <div class="inner">
+        <form class='form-row' th:method="post" th:action="@{/order}">
+            <button type="submit">order</button>
+            <select th:name="orderby">
+                <option th:text="Make" th:value="make"></option>
+                <option th:text="Power" th:value="power"></option>
+                <option th:text="Price" th:value="price"></option>
+                <option th:text="Weight" th:value="weight"></option>
+            </select>
+
+            <select th:name="order">
+                <option th:text="asc" th:value="asc"></option>
+                <option th:text="desc" th:value="desc"></option>
+            </select>
+        </form>
+    </div>
+    <div class="inner">
+
+    </div>
+
+    <table>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Power</th>
+            <th>Torque</th>
+            <th>Acceleration</th>
+            <th>Top Speed</th>
+            <th>Drive</th>
+            <th>Weight</th>
+            <th>Price</th>
+        </tr>
+        <tr th:each="car: ${carlist}">
+
+            <td th:text="${car.Make}"></td>
+            <td th:text="${car.Model}"></td>
+            <td th:text="${car.Power} +' hp'"></td>
+            <td th:text="${car.Torque} + ' Nm'"></td>
+            <td th:text="${car.Acceleration}+ ' s'"></td>
+            <td th:text="${car.TopSpeed}+ ' km/h'"></td>
+            <td th:text="${car.Drive}"></td>
+            <td th:text="${car.Weight} +' kg'"></td>
+            <td th:text="${car.Price} +' HUF'"></td>
+            <td>
+                <button type="button" class="fill"><a th:href="@{'/editcar?id='+${car.getId}}">Edit</a></button>
+
+            </td>
+        </tr>
+
+
+    </table>
+
+</div>
+
+</body>
+</html>
