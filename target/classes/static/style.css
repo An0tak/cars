@@ -1,0 +1,164 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: cadetblue;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+
+}
+
+td, th {
+    border: slategray solid 1px;
+    padding: 6px 20px 6px;
+
+}
+
+.block {
+    display: block;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.form-row {
+    text-align: right;
+}
+
+
+.button-78 {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: Eina01, sans-serif;
+    font-weight: 800;
+    justify-content: center;
+    margin: 0;
+    min-height: 64px;
+    outline: none;
+    overflow: visible;
+    padding: 9px 10px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    .button-78 {
+        padding: 9px 22px;
+    }
+}
+
+.button-78:before,
+.button-78:after {
+    border-radius: 80px;
+}
+
+.button-78:before {
+    background-image: linear-gradient(92.83deg, #808080 0, #443b3b 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+.button-78:after {
+    background-color: initial;
+    background-image: linear-gradient(#5b5b5b 0, #0c0d0d 100%);
+    bottom: 4px;
+    content: "";
+    display: block;
+    left: 4px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+}
+
+.button-78:hover:not(:disabled):before {
+    background: linear-gradient(92.83deg, rgb(128, 128, 128) 0%, rgb(68, 59, 59) 100%);
+}
+
+.button-78:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+
+.button-78:active:not(:disabled) {
+    color: #5b5b5b;
+}
+
+.button-78:active:not(:disabled):before {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #808080 0, #443b3b 100%);
+}
+
+.button-78:active:not(:disabled):after {
+    background-image: linear-gradient(#5b5b5b 0, #0c0d0d 100%);
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+}
+
+.button-78:disabled {
+    cursor: default;
+    opacity: .24;
+}
+
+#outer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.inner {
+    display: inline-block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
